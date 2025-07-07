@@ -14,21 +14,78 @@
       background-color: #f8f9fa;
       color: #333;
     }
+
+    .hero {
+      margin-top: 80px; /* Prevent navbar overlap */
+    }
+
     .hero-image img {
       width: 100%;
       max-height: 450px;
       object-fit: cover;
     }
+
     .hero-text {
       background-color: rgba(0, 0, 0, 0.6);
       border-left: 5px solid #ffc107;
       padding: 20px;
       color: #fff;
     }
-    .card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transform: translateY(-5px);
-      transition: 0.3s ease-in-out;
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .navbar-brand {
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      border-radius: 0.5rem;
+    }
+
+    form button {
+      border-radius: 0.5rem;
+      padding: 10px 20px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -65,7 +122,7 @@
 <!-- Hero Section -->
 <section class="hero text-center text-white" id="home">
   <div class="hero-image position-relative">
-    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1350&q=80" alt="Hero Banner" />
+    <img src="jee.jpg.jpg" alt="Hero Banner" class="img-fluid" />
     <div class="hero-text position-absolute top-50 start-50 translate-middle rounded">
       <h1>Welcome to Aarambh Education</h1>
       <p>Unlock your potential with expert-led courses</p>
@@ -78,7 +135,7 @@
   <h2 class="text-center mb-4">Our Courses</h2>
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="card h-100 text-center">
+      <div class="card text-center">
         <img src="jee.jpg.jpg" class="card-img-top" alt="JEE Course">
         <div class="card-body">
           <h5 class="card-title">JEE Foundation</h5>
@@ -87,7 +144,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card h-100 text-center">
+      <div class="card text-center">
         <img src="neet.jpg.jpg" class="card-img-top" alt="NEET Course">
         <div class="card-body">
           <h5 class="card-title">NEET Foundation</h5>
@@ -96,7 +153,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card h-100 text-center">
+      <div class="card text-center">
         <img src="ipmat.jpg.jpg" class="card-img-top" alt="CLAT/IPMAT Course">
         <div class="card-body">
           <h5 class="card-title">CLAT/IPMAT</h5>
