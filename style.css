@@ -1,116 +1,71 @@
-/* Reset and base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f8f9fa;
+  background-color: #f8f9fa;
   color: #333;
 }
 
-/* Header */
-header {
-  background: #004080;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
 /* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
+.hero-image img {
   width: 100%;
-  height: auto;
+  max-height: 450px;
+  object-fit: cover;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-left: 5px solid #ffc107;
   padding: 20px;
-  border-radius: 10px;
+  color: #fff;
 }
 
-/* Tabs Content */
-.tab-content {
-  padding: 40px 30px;
-  text-align: center;
+.hero-text h1 {
+  font-size: 2.5rem;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.hero-text p {
+  font-size: 1.2rem;
 }
 
+/* Cards */
 .card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 300px;
-  padding: 20px;
-  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 8px;
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/* Contact Form */
+form input, form textarea {
+  border-radius: 0.5rem;
+}
+
+form button {
+  border-radius: 0.5rem;
+  padding: 10px 20px;
 }
 
 /* Footer */
 footer {
-  background: #004080;
+  background-color: #004080;
   color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
 }
 
-/* Responsive */
+/* Responsive Headings */
 @media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
+  .hero-text h1 {
+    font-size: 1.8rem;
   }
 
-  header {
-    flex-direction: column;
-    gap: 10px;
+  .hero-text p {
+    font-size: 1rem;
   }
 }
