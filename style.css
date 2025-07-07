@@ -1,8 +1,10 @@
-/* Global */
+/* Base styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar */
@@ -11,9 +13,9 @@ body {
   font-weight: bold;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero {
-  margin-top: 80px; /* To prevent navbar overlap */
+  margin-top: 80px;
 }
 
 .hero-image img {
@@ -38,7 +40,22 @@ body {
   font-size: 1.2rem;
 }
 
-/* Course Cards */
+/* Highlights icons */
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Bullet icons */
+.bullet-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Course cards */
 .card {
   height: 100%;
   display: flex;
@@ -60,7 +77,7 @@ body {
   justify-content: center;
 }
 
-/* Contact Form */
+/* Form elements (if used later) */
 form input, form textarea {
   border-radius: 0.5rem;
 }
@@ -76,7 +93,12 @@ footer {
   color: white;
 }
 
-/* Responsive Adjustments */
+/* Headings */
+h2 {
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 1.8rem;
